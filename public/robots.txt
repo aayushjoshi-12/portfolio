@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://aayushjoshi-12.vercel.app
+
+# Sitemaps
+Sitemap: https://aayushjoshi-12.vercel.app/sitemap.xml
