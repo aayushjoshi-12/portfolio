@@ -24,7 +24,7 @@ const ProjectComponent = ({ project }: { project: ProjectDescProps; key: number 
           {project.techStack && project.techStack.map((tech: string, index: number) => (
             <p
               key={index}
-              className="text-mutedgray px-2 py-1 rounded-2xl inline-block border border-mutedgray"
+              className="text-lightgray px-2 py-1 rounded-2xl inline-block border border-mutedgray"
             >
               {tech}
             </p>

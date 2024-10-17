@@ -5,7 +5,7 @@ import {IconArrowUpRight} from '@tabler/icons-react'
 const Footer = () => {
   return (
     <div className='py-10 text-lightgray'>
-      <div className="flex gap-4">
+      <div className="flex flex-wrap gap-1">
         <Link href="mailto:joshiaayush1244@gmail.com" className='flex hover:text-halfgray'>
           <IconArrowUpRight/> joshiaayush1244@gmail.com
         </Link>
