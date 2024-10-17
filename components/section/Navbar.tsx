@@ -8,7 +8,7 @@ const Navbar = () => {
       </h1>
       <div className="flex gap-4">
         <Link href="/" className="flex hover:text-halfgray">home</Link>
-        <Link href="./resume.pdf" target="_blank" className="flex hover:text-halfgray">resume</Link>
+        <Link href="https://docs.google.com/document/d/1PZ_CVc_FqQEN27OQNE1eftXs4jPL9dwIUe0IB9jD__8/edit?usp=sharing" target="_blank" className="flex hover:text-halfgray">resume</Link>
         <Link href="https://medium.com/@aayushjoshi-12" target="_blank" className="flex hover:text-halfgray">blogs</Link>
       </div>
     </div>

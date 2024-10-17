@@ -7,7 +7,7 @@ const Footer = () => {
     <div className='py-10 text-lightgray'>
       <div className="flex gap-4">
         <Link href="mailto:joshiaayush1244@gmail.com" className='flex hover:text-halfgray'>
-          <IconArrowUpRight/> email
+          <IconArrowUpRight/> joshiaayush1244@gmail.com
         </Link>
         <Link href="https://github.com/aayushjoshi-12/" className='flex hover:text-halfgray'>
         <IconArrowUpRight/> github

@@ -6,29 +6,23 @@ export const projects = [
     techStack: ["Python", "Langchain", "Streamlit", "Langchain-Huggingface", "SQLite", "ChromaDB", "Mistral-7B-v0.3"],
   },
   {
-    title: "Finance LLM",
-    description: "Developed Python scripts for automated data collection using Google Custom Search API and built an LLM dataset parser to generate a QA dataset. Fine-tuned an open-source Hugging Face model with the custom dataset to optimize performance. Utilized libraries like Beautiful Soup, PyPDF2, and Python-dotenv for auxiliary tasks.",
-    link: "https://github.com/aayushjoshi-12/finance-llm",
-    techStack: ["Python", "Transformers", "TRL", "Bitsandbytes", "Accelerate", "Google Colab"],
-  },        
-  {
-    title: "Face Emotion Detection",
-    description: "Integrated YOLO for face detection and fine-tuned ResNet18 for classifying seven emotions: Angry, Disgust, Fear, Happy, Neutral, Sad, and Surprise. Used pre-trained models for quick inference and easy setup on Linux systems.",
-    link: "https://github.com/aayushjoshi-12/faces",
-    techStack: ["Python", "PyTorch", "YOLO", "ResNet", "OpenCV", "Linux"],
-  },
-  {
     title: "Snake Game",
     description: "Snake Game with AI combines the classic Snake game with an AI agent trained using reinforcement learning. It features both manual and AI-controlled gameplay, customizable settings, score tracking, and real-time plotting of training progress. The AI uses a Q-network built with PyTorch to navigate the game.",
     link: "https://github.com/aayushjoshi-12/snake-game",
     techStack: ["Python", "PyTorch", "Pygame", "NumPy", "Matplotlib"],
   },
   {
-    title: "Epsilon",
-    description: "Epsilon is a 2D physics engine for reinforcement learning, simulating interactions with shapes like rectangles and circles. It features collision detection, response, and basic force application. Currently in development, it aims to improve collision handling and integrate more fully with RL, though issues with circle and rod collisions remain.",
-    link: "https://github.com/aayushjoshi-12/epsilon",
-    techStack: ["Python", "Pygame"],
+    title: "Personal Portfolio",
+    description: "Developed a personal portfolio website using Next.js",
+    link: "https://aayushjoshi.10xdevs.in",
+    techStack: ["Next.js", "Tailwind CSS"],
   },
+  {
+    title: "Finance LLM",
+    description: "Developed Python scripts for automated data collection using Google Custom Search API and built an LLM dataset parser to generate a QA dataset. Fine-tuned an open-source Hugging Face model with the custom dataset to optimize performance. Utilized libraries like Beautiful Soup, PyPDF2, and Python-dotenv for auxiliary tasks.",
+    link: "https://github.com/aayushjoshi-12/finance-llm",
+    techStack: ["Python", "Transformers", "TRL", "Bitsandbytes", "Accelerate", "Google Colab"],
+  },        
   {
     title: "Emailer",
     description: "Emailer Project automates sending emails to recruiters using the Gmail API. It requires setting up Gmail API credentials and a list of recruiter emails in an Excel file. Once configured, the project sends emails with an attached resume.",
@@ -40,5 +34,23 @@ export const projects = [
     description: "Performed basic preprocessing and EDA on a loan dataset.",
     link: "https://github.com/aayushjoshi-12/loan-approval",
     techStack: ["Python", "Pandas", "Scikit-learn", "Matplotlib", "Seaborn"],
-  }
+  },
+  {
+    title: "Face Emotion Detection",
+    description: "Integrated YOLO for face detection and fine-tuned ResNet18 for classifying seven emotions: Angry, Disgust, Fear, Happy, Neutral, Sad, and Surprise. Used pre-trained models for quick inference and easy setup on Linux systems.",
+    link: "https://github.com/aayushjoshi-12/faces",
+    techStack: ["Python", "PyTorch", "YOLO", "ResNet", "OpenCV", "Linux"],
+  },
+  {
+    title: "Chat with pdf",
+    description: "Built a Streamlit web application that allows users to upload a PDF file and interact with its content using a chat interface. It leverages LangChain for document retrieval and processing, and HuggingFace for embeddings.",
+    link: "https://github.com/aayushjoshi-12/chat-with-pdf",
+    techStack: ["Python", "Streamlit", "Langchain", "Huggingface"],
+  },
+  {
+    title: "Epsilon",
+    description: "Epsilon is a 2D physics engine for reinforcement learning, simulating interactions with shapes like rectangles and circles. It features collision detection, response, and basic force application. Currently in development, it aims to improve collision handling and integrate more fully with RL, though issues with circle and rod collisions remain.",
+    link: "https://github.com/aayushjoshi-12/epsilon",
+    techStack: ["Python", "Pygame"],
+  },
 ];
