@@ -3,7 +3,6 @@ import { Plus_Jakarta_Sans, Sacramento } from "next/font/google";
 import "./globals.css";
 
 import { cn } from "@/lib/utils";
-import { Navbar } from "@/components/section";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 
 const fontSans = Plus_Jakarta_Sans({
@@ -146,7 +145,6 @@ export default function RootLayout({
           fontSacramento.variable
         )}
       >
-        <Navbar />
         <Breadcrumbs />
         {children}
       </body>
