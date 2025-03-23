@@ -3,9 +3,9 @@ import { experiences } from "@/constants/experiences";
 
 export const Experiences = () => {
   return (
-    <div>
+    <div className="">
       <h2 className="text-3xl text-lightgray font-semibold pb-3">Experience</h2>
-      <div className="">
+      <div className="grid gap-4">
         {experiences.map((experience, index) => (
           <ExperienceComponent experience={experience} key={index} />
         ))}
