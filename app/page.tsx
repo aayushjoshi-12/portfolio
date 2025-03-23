@@ -1,4 +1,4 @@
-import { About, Experiences, Footer, Navbar, Projects } from "@/components/section";
+import { About, Experiences, Footer, Projects } from "@/components/section";
 
 export default function Home() {
   return(
