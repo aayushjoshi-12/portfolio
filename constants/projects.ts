@@ -1,9 +1,9 @@
 export const projects = [
   {
-    title: "Surch AI",
-    description: "Developed a web-based search summarizer using Google Custom Search API, Beautiful Soup, and Langchain for conversational retrieval. Implemented ChromaDB for vector storage and added a history feature with SQLite to track and revisit user queries.",
-    link: "https://surch-12.streamlit.app",
-    techStack: ["Python", "Langchain", "Streamlit", "Langchain-Huggingface", "SQLite", "ChromaDB", "Mistral-7B-v0.3"],
+    title: "Interviewer AI Agent",
+    description: "Developed an AI agent that conducts interviews with users based on there resume and job description. The agent uses a LLM to generate interview questions, both coding and experience based, and evaluates the user's responses.",
+    link: "https://github.com/aayushjoshi-12/interviewer",
+    techStack: ["Python", "Langgraph", "Langchain", "FastAPI", "PostgresSQL", "Llama-3.3-70b-specdec"],
   },
   {
     title: "Snake Game",
@@ -18,6 +18,12 @@ export const projects = [
     techStack: ["Next.js", "Tailwind CSS"],
   },
   {
+    title: "Surch AI",
+    description: "Developed a web-based search summarizer using Google Custom Search API, Beautiful Soup, and Langchain for conversational retrieval. Implemented ChromaDB for vector storage and added a history feature with SQLite to track and revisit user queries.",
+    link: "https://surch-12.streamlit.app",
+    techStack: ["Python", "Langchain", "Streamlit", "Langchain-Huggingface", "SQLite", "ChromaDB", "Mistral-7B-v0.3"],
+  },
+  {
     title: "Finance LLM",
     description: "Developed Python scripts for automated data collection using Google Custom Search API and built an LLM dataset parser to generate a QA dataset. Fine-tuned an open-source Hugging Face model with the custom dataset to optimize performance. Utilized libraries like Beautiful Soup, PyPDF2, and Python-dotenv for auxiliary tasks.",
     link: "https://github.com/aayushjoshi-12/finance-llm",
@@ -30,6 +36,12 @@ export const projects = [
     techStack: ["Python", "Pandas", "Openpyxl", "Google-auth", "Gmail API"],
   },
   {
+    title: "Chat with pdf",
+    description: "Built a Streamlit web application that allows users to upload a PDF file and interact with its content using a chat interface. It leverages LangChain for document retrieval and processing, and HuggingFace for embeddings.",
+    link: "https://github.com/aayushjoshi-12/chat-with-pdf",
+    techStack: ["Python", "Streamlit", "Langchain", "Huggingface"],
+  },
+  {
     title: "Loan Approval",
     description: "Performed basic preprocessing and EDA on a loan dataset.",
     link: "https://github.com/aayushjoshi-12/loan-approval",
@@ -40,12 +52,6 @@ export const projects = [
     description: "Integrated YOLO for face detection and fine-tuned ResNet18 for classifying seven emotions: Angry, Disgust, Fear, Happy, Neutral, Sad, and Surprise. Used pre-trained models for quick inference and easy setup on Linux systems.",
     link: "https://github.com/aayushjoshi-12/faces",
     techStack: ["Python", "PyTorch", "YOLO", "ResNet", "OpenCV", "Linux"],
-  },
-  {
-    title: "Chat with pdf",
-    description: "Built a Streamlit web application that allows users to upload a PDF file and interact with its content using a chat interface. It leverages LangChain for document retrieval and processing, and HuggingFace for embeddings.",
-    link: "https://github.com/aayushjoshi-12/chat-with-pdf",
-    techStack: ["Python", "Streamlit", "Langchain", "Huggingface"],
   },
   {
     title: "Epsilon",
