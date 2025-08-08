@@ -1,16 +1,23 @@
 export const experiences = [
   {
-    title: "Machine Learning Intern",
-    company: "The Social Purpose Trust",
-    description: "Researching and developing AI-driven models for climate impact assessment, predictive analytics, and automation. Enhancing climate data processing, environmental monitoring, and integrating AI solutions into the Surya Sangam Web Portal for sustainability initiatives.",
-    date: "2025//02 - Present",
-    location: "India (Remote)",
+    title: "Software Engineer",
+    company: "ThinkAct AI",
+    description: "Architected and deployed advanced RAG applications with multi-tenant architecture and highly configurable, decoupled components using YAML-based service configurations, scalable vector database integration, robust task management, and optimized retrieval methods. Designed and implemented AI-driven platforms and specialized agents leveraging LangChain, LangGraph, and Model Context Protocol (MCP), including task-specific MCP servers and client integrations. Led a small development team, conducted peer code reviews, and contributed to backend systems using SQL/NoSQL databases and FastAPI-based RESTful APIs.",
+    date: "2025/06 - Present",
+    location: "Remote",
   },
   {
-    title: "Technical Document Specialist",
-    company: "Pragadas Technologies",
-    description: "I tailored over 200 resumes, consistently achieving Jobscan scores above 75%, which helped clients secure multiple interviews. I developed Python scripts to automate the resume tailoring process using LLMs and advanced Retrieval-Augmented Generation (RAG) chains. Additionally, I provided clients with personalized insights on their resumes and maintained open communication throughout the process. By leveraging prompt engineering techniques, I ensured consistent and relevant results from models like ChatGPT and Mistral-7B-v0.3.",
-    date: "2024//07 - 2024/09",
-    location: "India (Remote)",
+    title: "Software Engineer Intern",
+    company: "Dolphant Group LLC",
+    description: "Fine-tuned open-source large language models (LLMs) on domain-specific datasets using QLoRA and Reinforcement Learning from Human Feedback (RLHF) on AWS. Developed scalable RESTful APIs with FastAPI to integrate LLMs and other backend services.",
+    date: "2025/04 - 2025/06",
+    location: "Remote",
+  },
+  {
+    title: "Machine Learning Intern",
+    company: "The Social Purpose Trust",
+    description: "Developed AI-driven models for climate solutions, including predictive analytics for environmental monitoring and impact assessment. Collected, preprocessed, and augmented climate-related datasets to improve model performance. Automated climate data analysis and reporting, integrating solutions into the Surya Sangam Web Portal to support sustainability initiatives.",
+    date: "2025/02 - 2025/04",
+    location: "Remote",
   },
 ];
