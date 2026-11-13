@@ -50,7 +50,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </a>
         <header className="sticky top-0 z-40 border-b-2 border-ink bg-paper">
           <div className="wrap flex items-center justify-between gap-4 py-3">
-            <Link href="/" className="label font-bold">Aayush Joshi</Link>
+            <Link href="/" translate="no" className="label font-bold">Aayush Joshi</Link>
             <nav aria-label="Primary" className="flex items-center gap-4 sm:gap-6">
               <Link href="/#work" className="label hidden underline-offset-4 hover:underline sm:inline">Work</Link>
               <Link href="/#experience" className="label hidden underline-offset-4 hover:underline sm:inline">Experience</Link>

@@ -10,7 +10,7 @@ export default function Home() {
       <section aria-labelledby="hero-h" className="wrap grid gap-10 py-14 sm:py-24 md:grid-cols-12 md:items-center">
         <div className="md:col-span-7">
           <p className="label settle" style={{ ["--i" as string]: 0 }}>AI systems engineer · Haridwar, India</p>
-          <h1 id="hero-h" className="settle mt-5 text-[clamp(3.5rem,11vw,8.5rem)] font-extrabold uppercase leading-[0.86] tracking-[-0.03em]" style={{ ["--i" as string]: 1 }}>
+          <h1 id="hero-h" translate="no" className="settle mt-5 text-[clamp(3.5rem,11vw,8.5rem)] font-extrabold uppercase leading-[0.86] tracking-[-0.03em]" style={{ ["--i" as string]: 1 }}>
             Aayush<br />Joshi
           </h1>
           <p className="settle mt-10 max-w-xl text-2xl font-medium leading-snug" style={{ ["--i" as string]: 2 }}>
@@ -20,7 +20,7 @@ export default function Home() {
             Agents, retrieval and MCP. Open to full-time roles and freelance work.
           </p>
           <div className="settle mt-8 flex flex-wrap gap-3" style={{ ["--i" as string]: 4 }}>
-            <a href={`mailto:${site.email}`} className="label lift box bg-ink px-5 py-3 text-paper">Email me</a>
+            <a href={`mailto:${site.email}`} className="label lift box bg-ink px-5 py-3 text-paper">Email Me</a>
             <a href={site.github} className="label lift box px-5 py-3">GitHub</a>
             <a href={site.linkedin} className="label lift box px-5 py-3">LinkedIn</a>
           </div>
@@ -35,7 +35,7 @@ export default function Home() {
         </div>
       </section>
 
-      <Section id="work" n="01" title="Selected work" shape="circle" tone="red">
+      <Section id="work" n="01" title="Selected Work" shape="circle" tone="red">
         <ul className="grid gap-6 sm:grid-cols-2">
           {flagships.map((p) => (
             <li key={p.slug}>
@@ -44,19 +44,19 @@ export default function Home() {
                   <Shape shape={p.shape} tone={p.tone} className="size-10" />
                   <span className="label">{p.n} · {p.status}</span>
                 </div>
-                <h3 className="mt-6 text-3xl font-extrabold leading-tight">{p.title}</h3>
+                <h3 translate="no" className="mt-6 text-3xl font-extrabold leading-tight">{p.title}</h3>
                 <p className="mt-3 text-muted">{p.summary}</p>
                 <p className="label mt-5">{p.tags.join(" / ")}</p>
               </Link>
             </li>
           ))}
         </ul>
-        <h3 className="label mt-14">Smaller things</h3>
+        <h3 className="label mt-14">Smaller Things</h3>
         <ul className="mt-4 border-t-2 border-ink">
           {smaller.map((s) => (
             <li key={s.name} className="border-b-2 border-ink">
               <a href={s.href} className="grid gap-1 py-4 hover:bg-paper-2 sm:grid-cols-[10rem_1fr] sm:gap-6">
-                <span className="font-mono font-bold">{s.name}</span>
+                <span translate="no" className="font-mono font-bold">{s.name}</span>
                 <span className="text-muted">{s.note}</span>
               </a>
             </li>
@@ -84,7 +84,7 @@ export default function Home() {
         <ul className="mt-3 flex flex-wrap gap-2">
           {skills.strong.map((s) => <li key={s} className="box tone-yellow px-3 py-1.5 font-medium">{s}</li>)}
         </ul>
-        <h3 className="label mt-8">Working knowledge</h3>
+        <h3 className="label mt-8">Working Knowledge</h3>
         <ul className="mt-3 flex flex-wrap gap-2">
           {skills.working.map((s) => <li key={s} className="box px-3 py-1.5 font-medium">{s}</li>)}
         </ul>
@@ -112,7 +112,7 @@ export default function Home() {
       <Section id="education" n="05" title="Education" shape="square" tone="red">
         <p className="text-2xl font-extrabold leading-tight">{education.degree}</p>
         <p className="mt-2">{education.school}</p>
-        <p className="label mt-2">{education.when} · {education.cgpa}</p>
+        <p className="label mt-2">{education.when} · {education.cgpa.replace(" ", "\u00a0")}</p>
       </Section>
 
       <section id="contact" aria-labelledby="contact-h" className="border-t-2 border-ink bg-ink text-paper">

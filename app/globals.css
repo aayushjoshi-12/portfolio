@@ -75,6 +75,9 @@ body {
 }
 
 a { color: inherit; }
+  a, button { touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
+  h1, h2, h3 { text-wrap: balance; }
+  p { text-wrap: pretty; }
 ::selection { background: var(--yellow); color: #151515; }
 
 :focus-visible {
@@ -99,6 +102,7 @@ a { color: inherit; }
   text-transform: uppercase;
 }
 
+.lift:hover { outline: 2px solid var(--ink); outline-offset: -7px; }
 .rule { border-top: 2px solid var(--ink); }
 .box { border: 2px solid var(--ink); }
 

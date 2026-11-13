@@ -36,7 +36,7 @@ export function ThemeToggle() {
       }}
     >
       <span aria-hidden className="inline-block size-3 rounded-full bg-current" />
-      <span suppressHydrationWarning>{theme}</span>
+      <span suppressHydrationWarning>{next}</span>
     </button>
   );
 }
