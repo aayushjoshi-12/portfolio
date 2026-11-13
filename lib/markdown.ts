@@ -4,7 +4,7 @@ import { education, experience, flagships, hackathons, site, skills, smaller } f
 
 const profile = () => `# ${site.name}
 
-> AI systems engineer in Haridwar, India. ${site.tagline} Open to full-time roles and freelance work.
+> AI systems engineer in Kishangarh, India. ${site.tagline} Open to full-time roles and freelance work.
 
 ## Contact
 

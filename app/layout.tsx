@@ -32,7 +32,7 @@ const jsonLd = {
   name: site.name,
   url: site.url,
   jobTitle: "AI systems engineer",
-  address: { "@type": "PostalAddress", addressLocality: "Haridwar", addressCountry: "IN" },
+  address: { "@type": "PostalAddress", addressLocality: "Kishangarh", addressCountry: "IN" },
   sameAs: [site.github, site.linkedin],
   alumniOf: { "@type": "CollegeOrUniversity", name: "Gurukula Kangri" },
 };
@@ -63,7 +63,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <footer className="rule">
           <div className="wrap label flex flex-wrap justify-between gap-2 py-6">
             <span>© {new Date().getFullYear()} {site.name}</span>
-            <span>Haridwar, India</span>
+            <span>Kishangarh, India</span>
           </div>
         </footer>
       </body>

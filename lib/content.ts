@@ -6,7 +6,7 @@ export const site = {
   linkedin: "https://www.linkedin.com/in/aayushjoshi1244",
   tagline: "I build AI agents, and the infrastructure that keeps them reliable.",
   description:
-    "Aayush Joshi is an AI systems engineer in Haridwar, India: agents, retrieval, MCP and the infrastructure that keeps them reliable.",
+    "Aayush Joshi is an AI systems engineer in Kishangarh, India: agents, retrieval, MCP and the infrastructure that keeps them reliable.",
 };
 
 export type Shape = "circle" | "square" | "triangle";

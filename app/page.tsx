@@ -9,7 +9,7 @@ export default function Home() {
     <>
       <section aria-labelledby="hero-h" className="wrap grid gap-10 py-14 sm:py-24 md:grid-cols-12 md:items-center">
         <div className="md:col-span-7">
-          <p className="label settle" style={{ ["--i" as string]: 0 }}>AI systems engineer · Haridwar, India</p>
+          <p className="label settle" style={{ ["--i" as string]: 0 }}>AI systems engineer · Kishangarh, India</p>
           <h1 id="hero-h" translate="no" className="settle mt-5 text-[clamp(3.5rem,11vw,8.5rem)] font-extrabold uppercase leading-[0.86] tracking-[-0.03em]" style={{ ["--i" as string]: 1 }}>
             Aayush<br />Joshi
           </h1>
