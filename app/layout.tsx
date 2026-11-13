@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: { default: "Aayush Joshi · AI systems engineer", template: "%s · Aayush Joshi" },
   description: site.description,
-  alternates: { canonical: "/" },
+  alternates: { canonical: "/", types: { "text/markdown": "/llms-full.txt" } },
   openGraph: { type: "website", url: site.url, siteName: site.name, title: "Aayush Joshi · AI systems engineer", description: site.tagline },
   twitter: { card: "summary_large_image" },
 };

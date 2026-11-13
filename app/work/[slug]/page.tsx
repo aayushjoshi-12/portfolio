@@ -13,7 +13,15 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const p = flagships.find((f) => f.slug === slug);
-  return p ? { title: p.title, description: p.summary, alternates: { canonical: `/work/${slug}` } } : {};
+  if (!p) return {};
+  const title = `${p.title} · case study`;
+  return {
+    title: p.title,
+    description: p.summary,
+    alternates: { canonical: `/work/${slug}` },
+    openGraph: { type: "article", url: `/work/${slug}`, title, description: p.summary },
+    twitter: { card: "summary_large_image", title, description: p.summary },
+  };
 }
 
 export default async function Work({ params }: { params: Promise<{ slug: string }> }) {
