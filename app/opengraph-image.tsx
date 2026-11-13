@@ -19,7 +19,7 @@ export default function Image() {
         <div style={{ position: "absolute", right: 64, top: 64, width: 400, height: 400, border: "4px solid #151515", display: "flex" }}>
           <div style={{ position: "absolute", left: 30, top: 30, width: 230, height: 230, borderRadius: 999, background: "#d7261e" }} />
           <div style={{ position: "absolute", right: 30, bottom: 30, width: 180, height: 180, background: "#1b3fa0" }} />
-          <div style={{ position: "absolute", left: 56, bottom: 30, width: 0, height: 0, borderLeft: "75px solid transparent", borderRight: "75px solid transparent", borderBottom: "140px solid #f2b705" }} />
+          <svg width="150" height="140" viewBox="0 0 150 140" style={{ position: "absolute", left: 56, bottom: 30 }}><polygon points="75,0 150,140 0,140" fill="#f2b705" /></svg>
         </div>
       </div>
     ),
