@@ -1,152 +1,71 @@
-import type { Metadata } from "next";
-import { Plus_Jakarta_Sans, Sacramento } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import { Jost, Space_Mono } from "next/font/google";
+import Link from "next/link";
+import { ThemeToggle } from "@/components/ThemeToggle";
+import { site } from "@/lib/content";
 import "./globals.css";
 
-import { cn } from "@/lib/utils";
-import { Breadcrumbs } from "@/components/Breadcrumbs";
-
-const fontSans = Plus_Jakarta_Sans({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-sans",
-  display: "swap",
-});
-
-const fontSacramento = Sacramento({
-  subsets: ["latin"],
-  weight: "400",
-  variable: "--font-sacramento",
-  display: "swap",
-});
+const jost = Jost({ subsets: ["latin"], variable: "--font-jost", display: "swap" });
+const mono = Space_Mono({ subsets: ["latin"], weight: ["400", "700"], variable: "--font-space-mono", display: "swap" });
 
 export const metadata: Metadata = {
-  title: "Aayush Joshi | Aspiring Machine Learning Engineer",
-  description:
-    "Aayush Joshi's portfolio - Showcasing skills in Python, machine learning, AI, LLMs, and more. Open to collaborations and opportunities.",
-  keywords:
-    "Aayush Joshi, Machine Learning Engineer, AI, Python, Portfolio, LLMs, PyTorch",
-  authors: [{ name: "Aayush Joshi" }],
-  robots: "index, follow",
-  metadataBase: new URL("https://aayushjoshi.10xdevs.in"),
-  alternates: {
-    canonical: "/",
-  },
-  viewport: "width=device-width, initial-scale=1",
-  openGraph: {
-    type: "website",
-    url: "https://aayushjoshi.10xdevs.in",
-    title: "Aayush Joshi | Aspiring Machine Learning Engineer",
-    description:
-      "Portfolio of Aayush Joshi, showcasing expertise in machine learning, AI, Python, and transformer models.",
-    siteName: "Aayush Joshi Portfolio",
-    images: [
-      {
-        url: "/images/og-laptop.png",
-        width: 1360,
-        height: 768,
-        alt: "Aayush Joshi Portfolio",
-      },
-    ],
-    locale: "en_US",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Aayush Joshi | Aspiring Machine Learning Engineer",
-    description:
-      "Portfolio of Aayush Joshi, showcasing expertise in machine learning, AI, Python, and transformer models.",
-    images: ["/images/og-laptop.png"],
-    creator: "@aayushjoshi_12",
-  },
-  other: {
-    "linkedin:owner": "aayushjoshi1244",
-    "linkedin:page_type": "article",
-    "linkedin:title": "Aayush Joshi | Machine Learning & AI Engineer",
-    "linkedin:description":
-      "Passionate Machine Learning Engineer with expertise in Python, NLP, and transformer models. View my projects and expertise.",
-    "linkedin:image": "https://aayushjoshi.10xdevs.in/images/og-laptop.png",
-    "linkedin:author": "Aayush Joshi",
-  },
-  verification: {
-    google: "google3e890796ae17d221.html",
-  },
-  category: "technology",
+  metadataBase: new URL(site.url),
+  title: { default: "Aayush Joshi · AI systems engineer", template: "%s · Aayush Joshi" },
+  description: site.description,
+  alternates: { canonical: "/" },
+  openGraph: { type: "website", url: site.url, siteName: site.name, title: "Aayush Joshi · AI systems engineer", description: site.tagline },
+  twitter: { card: "summary_large_image" },
 };
 
-const schemaData = {
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#f2ede1" },
+    { media: "(prefers-color-scheme: dark)", color: "#141414" },
+  ],
+};
+
+const themeScript = `try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}`;
+
+const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
-  name: "Aayush Joshi",
-  jobTitle: "Machine Learning Engineer",
-  url: "https://aayushjoshi.10xdevs.in",
-  sameAs: [
-    "https://github.com/aayushjoshi-12",
-    "https://www.linkedin.com/in/aayushjoshi1244",
-    "https://medium.com/@aayushjoshi-12",
-  ],
-  description:
-    "Aspiring Machine Learning Engineer with expertise in Python, AI, and Transformer models.",
-  image: "https://aayushjoshi.10xdevs.in/images/og-laptop.png",
-  knowsAbout: [
-    "Machine Learning",
-    "Deep Learning",
-    "Natural Language Processing",
-    "Python",
-    "PyTorch",
-    "TensorFlow",
-    "Transformers",
-    "LLMs",
-  ],
-  alumniOf: {
-    "@type": "CollegeOrUniversity",
-    name: "Gurukul Kangri University",
-  },
-  hasOccupation: {
-    "@type": "Occupation",
-    name: "Machine Learning Engineer  ",
-    skills: "Python, PyTorch, TensorFlow, Transformers, NLP, Deep Learning",
-  },
+  name: site.name,
+  url: site.url,
+  jobTitle: "AI systems engineer",
+  address: { "@type": "PostalAddress", addressLocality: "Haridwar", addressCountry: "IN" },
+  sameAs: [site.github, site.linkedin],
+  alumniOf: { "@type": "CollegeOrUniversity", name: "Gurukula Kangri" },
 };
 
-const websiteSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  url: "https://aayushjoshi.10xdevs.in",
-  name: "Aayush Joshi | ML Engineer Portfolio",
-  description:
-    "Portfolio website of Aayush Joshi, an aspiring Machine Learning Engineer.",
-  potentialAction: {
-    "@type": "SearchAction",
-    target: "https://aayushjoshi.10xdevs.in/search?q={search_term_string}",
-    "query-input": "required name=search_term_string",
-  },
-};
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${jost.variable} ${mono.variable}`} suppressHydrationWarning>
       <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
-        />
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </head>
-      <body
-        className={cn(
-          "bg-black min-h-screen font-sans antialiased",
-          fontSans.variable,
-          fontSacramento.variable
-        )}
-      >
-        <Breadcrumbs />
-        {children}
+      <body>
+        <a href="#main" className="label absolute left-2 top-2 z-50 -translate-y-20 bg-ink px-3 py-2 text-paper focus:translate-y-0">
+          Skip to content
+        </a>
+        <header className="sticky top-0 z-40 border-b-2 border-ink bg-paper">
+          <div className="wrap flex items-center justify-between gap-4 py-3">
+            <Link href="/" className="label font-bold">Aayush Joshi</Link>
+            <nav aria-label="Primary" className="flex items-center gap-4 sm:gap-6">
+              <Link href="/#work" className="label hidden underline-offset-4 hover:underline sm:inline">Work</Link>
+              <Link href="/#experience" className="label hidden underline-offset-4 hover:underline sm:inline">Experience</Link>
+              <Link href="/#contact" className="label underline-offset-4 hover:underline">Contact</Link>
+              <ThemeToggle />
+            </nav>
+          </div>
+        </header>
+        <main id="main">{children}</main>
+        <footer className="rule">
+          <div className="wrap label flex flex-wrap justify-between gap-2 py-6">
+            <span>© {new Date().getFullYear()} {site.name}</span>
+            <span>Haridwar, India</span>
+          </div>
+        </footer>
       </body>
     </html>
   );

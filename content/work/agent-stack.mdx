@@ -1,0 +1,21 @@
+## What it is
+
+An agent runtime built from first principles, to understand what production agents actually need beyond a prompt and a list of tools. The repository is private for now, so this page describes it rather than linking it.
+
+## What it does
+
+- A tool loop with step limits and deadlines, so a run cannot spin forever.
+- Approvals: risky tool calls pause for a human decision.
+- Sessions and conversations that persist across runs.
+- Memory and todos the agent can read and update.
+- Subagents for delegated work.
+- Two front ends over the same core: a terminal UI and a Telegram gateway.
+- Observability, so every run can be inspected afterwards.
+
+## How it is checked
+
+429 tests. The limits, approvals and session handling are the parts I wanted to be boring and well covered.
+
+## Why build it
+
+To understand what an agent needs around the model: deadlines, approvals and durable state. Building the runtime myself is how I learn where those edges are.

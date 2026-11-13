@@ -1,8 +1,11 @@
+import createMDX from "@next/mdx";
+
+const withMDX = createMDX();
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    eslint: {
-        ignoreDuringBuilds: true,
-    },
+  pageExtensions: ["ts", "tsx", "md", "mdx"],
+  poweredByHeader: false,
 };
 
-export default nextConfig;
+export default withMDX(nextConfig);

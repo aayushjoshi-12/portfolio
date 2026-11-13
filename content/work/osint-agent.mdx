@@ -1,0 +1,12 @@
+## What it is
+
+A streaming LangChain and LangGraph agent that investigates a target by driving open-source intelligence tools. The tools sit behind a single MCP server, so any MCP-capable client can use them, not just this agent.
+
+## How it is put together
+
+- An MCP server wraps tools such as theHarvester, Sherlock, Shodan, Metagoofil, Osintgram, SpiderFoot and Recon-ng.
+- A LangGraph agent chooses which tool to call and streams its progress back as it works.
+
+## Status
+
+Working but rough: a handful of commits from November 2025. It is a demonstration of the MCP pattern, and only for use on targets you are authorised to investigate.
